@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #43389f;
+  background: -webkit-linear-gradient(bottom left, #43389f 0%, #4ec6ca 100%);
+  background: -moz-linear-gradient(bottom left, #43389f 0%, #4ec6ca 100%);
+  background: -o-linear-gradient(bottom left, #43389f 0%, #4ec6ca 100%);
+  background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#43389F", endColorstr="#4ec6ca",GradientType=1 );
+  font-family: "Courier New", "Courier", sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.numberContent {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+.numberContent .one-one {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  width: 20px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 3px;
+  transform: rotate(50deg);
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+.numberContent .one-two {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  width: 24px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+.numberContent .zero-one,
+.numberContent .zero-two {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 17px;
+  height: 100px;
+  width: 100px;
+  border: 24px solid #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+.numberContent .zero-two {
+  z-index: 1;
+  left: 100px;
+}
+
+.textContent .main {
+  position: relative;
+  width: 200px;
+  display: block;
+  font-weight: 700;
+  font-size: 83px;
+  line-height: 60px;
+  margin-top: 6px;
+}
+.textContent .sub {
+  position: relative;
+  width: 200px;
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+}
+
+/*# sourceMappingURL=main.css.map */
