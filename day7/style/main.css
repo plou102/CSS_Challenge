@@ -1,0 +1,229 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #264057;
+  color: #666666;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 3px;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-in-out;
+}
+.center.show-menu {
+  transform: translateX(150px);
+}
+.center .header {
+  height: 60px;
+  width: 100%;
+  background-color: #5f98cd;
+}
+.center .header .menuIcon {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  top: 23px;
+  left: 20px;
+  cursor: pointer;
+}
+.center .header .menuIcon:hover .dashTop,
+.center .header .menuIcon:hover .dashCircle,
+.center .header .menuIcon:hover .dashBottom {
+  background-color: #fff;
+}
+.center .header .menuIcon .dashTop, .center .header .menuIcon .dashBottom {
+  background-color: #b2daff;
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+.center .header .menuIcon .dashCircle {
+  background-color: #b2daff;
+  border-radius: 50%;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  top: -2px;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+}
+.center .header .menuIcon .dashBottom {
+  width: 29px;
+  top: auto;
+  bottom: 0;
+}
+.center .header .title {
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.center .header .searchInput {
+  position: absolute;
+  top: 13px;
+  right: 55px;
+  width: 75%;
+  height: 34px;
+  box-sizing: border-box;
+  border-radius: 17px;
+  border: none;
+  padding: 0 17px;
+  background-color: #fff;
+  font-size: 13px;
+  color: #666;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(15px);
+  opacity: 0;
+  pointer-events: none;
+}
+.center .header .searchInput:focus {
+  outline: none;
+}
+.center .header .searchInput.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+.center .header .searchIcon {
+  position: absolute;
+  font-size: 20px;
+  color: #b2daff;
+  top: 18px;
+  right: 20px;
+  cursor: pointer;
+}
+.center .header .searchIcon:hover {
+  color: #fff;
+}
+.center .notifications {
+  position: relative;
+  height: 240px;
+  margin: 0;
+}
+.center .notifications .line {
+  position: absolute;
+  top: -25px;
+  left: 27px;
+  bottom: 0;
+  width: 3px;
+  background-color: #ebebeb;
+}
+.center .notifications .notification {
+  position: relative;
+  z-index: 2;
+  margin: 25px 20px 25px 43px;
+}
+.center .notifications .notification:nth-child(2) {
+  animation: here-am-i 0.5s ease-out 0.4s;
+  animation-fill-mode: both;
+}
+.center .notifications .notification:nth-child(3) {
+  animation: here-am-i 0.5s ease-out 0.6s;
+  animation-fill-mode: both;
+}
+.center .notifications .notification:nth-child(4) {
+  animation: here-am-i 0.5s ease-out 0.8s;
+  animation-fill-mode: both;
+}
+.center .notifications .notification:hover {
+  color: #5f98cd;
+  cursor: pointer;
+}
+.center .notifications .notification .circle {
+  box-sizing: border-box;
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  background-color: #fff;
+  border: 2px solid #5f98cd;
+  box-shadow: 0 0 0 3px #fff;
+  border-radius: 50%;
+  top: 0;
+  left: -20px;
+}
+.center .notifications .notification .time {
+  font-size: 11px;
+  lint-height: 11px;
+  margin-bottom: 2px;
+}
+.center .notifications .notification p {
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.menu {
+  position: absolute;
+  width: 170px;
+  height: 270px;
+  background-color: #43627d;
+  border-radius: 3px;
+  top: 65px;
+  left: 50px;
+  transform: translateX(20px);
+  transition: all 0.5s ease-in-out;
+}
+.menu.active {
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+  transform: translateX(0);
+}
+.menu ul {
+  margin: 0;
+  padding: 10px 0;
+}
+.menu li {
+  color: #93b2cd;
+  margin: 0;
+  padding: 18px 17px;
+  list-style: none;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.menu li:hover {
+  color: #fff;
+  background-color: #385269;
+}
+.menu li span {
+  margin-right: 8px;
+}
+
+@keyframes here-am-i {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map */
